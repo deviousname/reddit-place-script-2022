@@ -17,29 +17,30 @@ pixel_x_start = int(os.getenv('ENV_DRAW_X_START'))
 pixel_y_start = int(os.getenv('ENV_DRAW_Y_START'))
 
 # map of colors for pixels you can place
-color_map = {
-    "#FF4500": 2,  # bright red
-    "#FFA800": 3,  # orange
-    "#FFD635": 4,  # yellow
-    "#00A368": 6,  # darker green
-    "#7EED56": 8,  # lighter green
-    "#2450A4": 12,  # darkest blue
-    "#3690EA": 13,  # medium normal blue
-    "#51E9F4": 14,  # cyan
-    "#811E9F": 18,  # darkest purple
-    "#B44AC0": 19,  # normal purple
-    "#FF99AA": 23,  # pink
-    "#9C6926": 25,  # brown
-    "#000000": 27,  # black
-    "#898D90": 29,  # grey
-    "#D4D7D9": 30,  # light grey
-    "#FFFFFF": 31,  # white
-}
+# map of colors for pixels you can place
+color_map = (
+    (255,69,0, 2),  # bright red
+    (255,168,0 3),  # orange
+    (255,214,53, 4),  # yellow
+    (0,163,104, 6),  # darker green
+    (126,237,86, 8),  # lighter green
+    (36,80,164, 12),  # darkest blue
+    (54,144,234, 13),  # medium normal blue
+    (81,233,244, 14),  # cyan
+    (129,30,159, 18),  # darkest purple
+    (180,74,192, 19),  # normal purple
+    (255,153,170, 23),  # pink
+    (156,105,38, 25),  # brown
+    (0,0,0, 27),  # black
+    (137,141,144, 29),  # grey
+    (212,215,217,  30),  # light grey
+    (255, 255, 255, 31),  # white
+)
 
-
+'''you dont need this function if you format colors like above as 4 item tuples
 def rgb_to_hex(rgb):
     return ('#%02x%02x%02x' % rgb).upper()
-
+'''
 
 def closest_color(target_rgb, rgb_colors_array_in):
     r, g, b = target_rgb
